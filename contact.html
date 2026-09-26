@@ -1,0 +1,274 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Contact | Elevartemis Marketing Group</title>
+  <meta name="description" content="Tell us a little about what you're working on. We'll take it from there. Start a conversation with Elevartemis.">
+  <link rel="icon" href="images/logo.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/contact.css">
+  <script>document.documentElement.classList.add('js');</script>
+</head>
+<body data-page="contact">
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <!-- ============ HEADER ============ -->
+  <header class="site-header" id="siteHeader">
+    <div class="header-inner">
+      <a class="brand" href="index.html" aria-label="Elevartemis Marketing Group home">
+        <img src="images/logo.png" alt="" width="50" height="58">
+        <span class="brand-text">
+          <span class="brand-name">Elevartemis</span>
+          <span class="brand-sub">MARKETING GROUP</span>
+        </span>
+      </a>
+      <button class="menu-toggle" id="menuToggle" aria-expanded="false" aria-controls="mainNav" aria-label="Open menu">
+        <span></span><span></span><span></span>
+      </button>
+      <nav class="main-nav" id="mainNav" aria-label="Main">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="services.html" class="nav-link">Services</a>
+        <a href="work.html" class="nav-link">Our Work</a>
+        <a href="resources.html" class="nav-link">Resources</a>
+        <a href="about.html" class="nav-link">About</a>
+        <a href="contact.html" class="nav-link is-active" aria-current="page">Contact</a>
+        <a href="resources.html" class="btn btn-purple nav-cta">Free resources</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <!-- ============ HERO ============ -->
+    <section class="ct-hero">
+      <div class="container">
+        <p class="eyebrow hero-anim" style="--d:0">Contact</p>
+        <h1 class="ct-title hero-anim" style="--d:1">Let's talk about your <span class="accent">marketing.</span></h1>
+        <p class="ct-lede hero-anim" style="--d:2">Have a project in mind, something that's not working, or just a feeling that your marketing could be better? Tell us what's going on.</p>
+        <p class="ct-reassure hero-anim" style="--d:3">You don't need to know exactly what you need before you reach out. That's part of what we're here for.</p>
+      </div>
+    </section>
+
+    <!-- ============ FORM + SIDEBAR ============ -->
+    <section class="ct-main">
+      <div class="container ct-grid">
+
+        <div class="form-card hero-anim" style="--d:3" id="formCard">
+          <!--
+            FORM DELIVERY: set the form's action to your form service
+            (e.g. https://formspree.io/f/xxxxxxx). Until then, messages
+            open in the visitor's email app, addressed to hello@elevartemis.com.
+          -->
+          <form id="contactForm" class="ct-form" action="" method="post" novalidate>
+            <div class="progress" aria-hidden="true">
+              <span class="progress-bar"><i id="progressFill"></i></span>
+              <span class="progress-label" id="progressLabel">Step 1 of 2 · About you</span>
+            </div>
+
+            <!-- ---------- STEP 1 ---------- -->
+            <fieldset class="fstep" id="step1" data-step="1">
+              <legend class="step-title">First, a little about you.</legend>
+              <p class="step-hint">Just the basics so we know who we're talking to. Takes about 30 seconds.</p>
+
+              <div class="field-grid">
+                <div class="field">
+                  <label for="name">Your name</label>
+                  <input id="name" name="name" type="text" autocomplete="name" required>
+                  <p class="err" id="name-err"></p>
+                </div>
+                <div class="field">
+                  <label for="business">Business name</label>
+                  <input id="business" name="business" type="text" autocomplete="organization" required>
+                  <p class="err" id="business-err"></p>
+                </div>
+                <div class="field span-2">
+                  <label for="email">Email</label>
+                  <input id="email" name="email" type="email" autocomplete="email" inputmode="email" required>
+                  <p class="err" id="email-err"></p>
+                </div>
+                <div class="field">
+                  <label for="website">Website <span class="opt">optional</span></label>
+                  <input id="website" name="website" type="text" inputmode="url" autocomplete="url" placeholder="yourbusiness.com">
+                </div>
+                <div class="field">
+                  <label for="phone">Phone <span class="opt">optional</span></label>
+                  <input id="phone" name="phone" type="tel" autocomplete="tel" inputmode="tel">
+                  <p class="micro">Only if you'd like a call. Email works great too.</p>
+                </div>
+              </div>
+
+              <!-- spam trap: real people never see this -->
+              <div class="hp" aria-hidden="true">
+                <label for="company_url">Leave this empty</label>
+                <input id="company_url" name="company_url" type="text" tabindex="-1" autocomplete="off">
+              </div>
+
+              <div class="step-actions">
+                <button type="button" class="btn btn-orange btn-lg" id="toStep2">Continue</button>
+                <p class="micro">Next: what you're working on. Almost everything there is optional.</p>
+              </div>
+            </fieldset>
+
+            <!-- ---------- STEP 2 ---------- -->
+            <fieldset class="fstep" id="step2" data-step="2">
+              <legend class="step-title">Nice to meet you<span id="hiName"></span>.</legend>
+              <p class="step-hint">Now the fun part. Everything on this step is optional, so share as much or as little as you like.</p>
+
+              <div class="q">
+                <p class="q-label" id="needsLabel">What are you working on? <span class="opt">choose any</span></p>
+                <div class="chips chips-stack" role="group" aria-labelledby="needsLabel">
+                  <label class="chip-opt chip-featured">
+                    <input type="checkbox" name="needs" value="Help figuring out what I actually need">
+                    <span><b>I need help figuring out what I actually need</b><em>Totally normal. This is where a lot of great projects start.</em></span>
+                  </label>
+                  <label class="chip-opt"><input type="checkbox" name="needs" value="A better website"><span>I need a better website</span></label>
+                  <label class="chip-opt"><input type="checkbox" name="needs" value="SEO / AEO"><span>I need help with SEO / AEO</span></label>
+                  <label class="chip-opt"><input type="checkbox" name="needs" value="Marketing strategy"><span>I need a marketing strategy</span></label>
+                  <label class="chip-opt"><input type="checkbox" name="needs" value="Social media"><span>I need help with social media</span></label>
+                  <label class="chip-opt"><input type="checkbox" name="needs" value="Content"><span>I need content</span></label>
+                  <label class="chip-opt"><input type="checkbox" name="needs" value="A specific campaign"><span>I need help with a specific campaign</span></label>
+                  <label class="chip-opt"><input type="checkbox" name="needs" value="Branding / creative"><span>I need branding / creative help</span></label>
+                  <label class="chip-opt"><input type="checkbox" name="needs" value="Something else" id="needOther"><span>Something else</span></label>
+                </div>
+                <div class="reveal" id="otherWrap" hidden>
+                  <label for="other_need">What else? <span class="opt">optional</span></label>
+                  <input id="other_need" name="other_need" type="text">
+                </div>
+              </div>
+
+              <div class="q">
+                <label class="q-label" for="details">What's going on? <span class="opt">optional</span></label>
+                <textarea id="details" name="details" rows="6" placeholder="Tell us what's happening, what you're trying to accomplish, or what's not working. Don't worry about using marketing terminology."></textarea>
+                <p class="micro">A few sentences is plenty. Rough notes are fine.</p>
+              </div>
+
+              <div class="q">
+                <p class="q-label" id="timingLabel">Where are you in the process? <span class="opt">optional</span></p>
+                <div class="chips" role="radiogroup" aria-labelledby="timingLabel">
+                  <label class="chip-opt"><input type="radio" name="timing" value="Just exploring"><span>Just exploring</span></label>
+                  <label class="chip-opt"><input type="radio" name="timing" value="I have a project in mind" id="timingProject"><span>I have a project in mind</span></label>
+                  <label class="chip-opt"><input type="radio" name="timing" value="I need help soon"><span>I need help soon</span></label>
+                  <label class="chip-opt"><input type="radio" name="timing" value="I need ongoing marketing support"><span>I need ongoing marketing support</span></label>
+                  <label class="chip-opt"><input type="radio" name="timing" value="I'm not sure yet"><span>I'm not sure yet</span></label>
+                </div>
+                <div class="reveal" id="deadlineWrap" hidden>
+                  <label for="deadline">Any timing or deadline we should know about? <span class="opt">optional</span></label>
+                  <input id="deadline" name="deadline" type="text" placeholder="e.g. before our spring opening">
+                </div>
+              </div>
+
+              <div class="q q-budget">
+                <p class="q-label" id="budgetLabel">Do you have a general marketing budget in mind? <span class="opt">optional</span></p>
+                <p class="micro">This isn't to screen anyone out. It just helps us suggest something that actually fits your situation.</p>
+                <div class="chips" role="radiogroup" aria-labelledby="budgetLabel">
+                  <label class="chip-opt"><input type="radio" name="budget" value="Not sure yet"><span>Not sure yet</span></label>
+                  <label class="chip-opt"><input type="radio" name="budget" value="Under $1,000"><span>Under $1,000</span></label>
+                  <label class="chip-opt"><input type="radio" name="budget" value="$1,000–$2,500"><span>$1,000–$2,500</span></label>
+                  <label class="chip-opt"><input type="radio" name="budget" value="$2,500–$5,000"><span>$2,500–$5,000</span></label>
+                  <label class="chip-opt"><input type="radio" name="budget" value="$5,000+"><span>$5,000+</span></label>
+                  <label class="chip-opt"><input type="radio" name="budget" value="I'd rather discuss it first"><span>I'd rather discuss it first</span></label>
+                </div>
+              </div>
+
+              <div class="step-actions final">
+                <button type="button" class="btn-back" id="backTo1">Back</button>
+                <button type="submit" class="btn btn-orange btn-lg" id="submitBtn">Start the Conversation</button>
+              </div>
+              <p class="form-status" id="formStatus" role="alert"></p>
+            </fieldset>
+          </form>
+
+          <!-- ---------- CONFIRMATION ---------- -->
+          <div class="done" id="done" hidden tabindex="-1">
+            <svg class="done-mark" viewBox="0 0 80 80" aria-hidden="true"><circle cx="40" cy="40" r="36"/><path d="M24 41l11 11 21-23"/></svg>
+            <h2 class="done-title">Thanks for reaching out.</h2>
+            <div id="doneSent">
+              <p class="done-strong">We've got it.</p>
+              <p>We'll take a look at what you're working on and get back to you soon.</p>
+            </div>
+            <div id="doneMail" hidden>
+              <p class="done-strong">Almost there.</p>
+              <p>Your email app just opened with your message filled in. Hit send and we've got it. If nothing opened, email us at <a href="mailto:hello@elevartemis.com">hello@elevartemis.com</a>.</p>
+            </div>
+            <p class="done-meantime">In the meantime, you can explore our free marketing resources.</p>
+            <a href="resources.html" class="btn btn-orange btn-lg">Explore Resources</a>
+          </div>
+        </div>
+
+        <!-- ============ SIDEBAR ============ -->
+        <aside class="ct-side">
+          <div class="side-card" data-reveal>
+            <h2 class="side-title">What happens next</h2>
+            <ol class="next-steps">
+              <li><span>1</span><div><b>Robyn reads what you sent.</b> A real person, not an autoresponder.</div></li>
+              <li><span>2</span><div><b>We reply by email</b> with a few thoughts or questions, or a time to talk.</div></li>
+              <li><span>3</span><div><b>We have a real conversation.</b> No pressure, no pitch deck. Just figuring out what would actually help.</div></li>
+            </ol>
+          </div>
+
+          <div class="side-card" data-reveal style="--d:1">
+            <h2 class="side-title">Rather email or call?</h2>
+            <a href="mailto:hello@elevartemis.com" class="side-line"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg>hello@elevartemis.com</a>
+            <a href="tel:3075551234" class="side-line"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 3h4l2 5-3 2a12 12 0 0 0 6 6l2-3 5 2v4a2 2 0 0 1-2 2A17 17 0 0 1 3 5a2 2 0 0 1 2-2z"/></svg>307.555.1234</a>
+            <p class="side-line static"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s-7-6-7-11a7 7 0 0 1 14 0c0 5-7 11-7 11z"/><circle cx="12" cy="10" r="2.5"/></svg>Based in Jackson Hole, Wyoming</p>
+          </div>
+
+          <div class="side-card soft" data-reveal style="--d:2">
+            <h2 class="side-title">Not ready to talk yet?</h2>
+            <p>That's fine. Browse free guides and tools, or get The Elevartemis Brief for practical ideas you can use on your own.</p>
+            <a href="resources.html" class="text-link">Free resources</a>
+          </div>
+        </aside>
+      </div>
+    </section>
+  </main>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div class="footer-brand">
+        <a class="brand" href="index.html" aria-label="Elevartemis Marketing Group home">
+          <img src="images/logo.png" alt="" width="44" height="52">
+          <span class="brand-text">
+            <span class="brand-name">Elevartemis</span>
+            <span class="brand-sub">MARKETING GROUP</span>
+          </span>
+        </a>
+        <p>Professional marketing.<br>Fractional cost. Real results.</p>
+      </div>
+      <nav class="footer-col" aria-label="Footer">
+        <h2 class="footer-heading">Explore</h2>
+        <a href="services.html">Services</a>
+        <a href="work.html">Our Work</a>
+        <a href="resources.html">Resources</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+      <div class="footer-col">
+        <h2 class="footer-heading">Get in touch</h2>
+        <a href="tel:3075551234" class="contact-line"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 3h4l2 5-3 2a12 12 0 0 0 6 6l2-3 5 2v4a2 2 0 0 1-2 2A17 17 0 0 1 3 5a2 2 0 0 1 2-2z"/></svg>307.555.1234</a>
+        <a href="mailto:hello@elevartemis.com" class="contact-line"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg>hello@elevartemis.com</a>
+        <span class="contact-line"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s-7-6-7-11a7 7 0 0 1 14 0c0 5-7 11-7 11z"/><circle cx="12" cy="10" r="2.5"/></svg>Jackson Hole, WY</span>
+      </div>
+      <div class="footer-col">
+        <h2 class="footer-heading">Follow</h2>
+        <div class="socials">
+          <a href="#" aria-label="Elevartemis on Facebook"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 3h-2a4 4 0 0 0-4 4v3H7v4h2v7h4v-7h3l1-4h-4V7a1 1 0 0 1 1-1h2z"/></svg></a>
+          <a href="#" aria-label="Elevartemis on Instagram"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="0.6"/></svg></a>
+          <a href="#" aria-label="Elevartemis on LinkedIn"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 10v8M6 6v.5M10 18v-8M10 13a3 3 0 0 1 6 0v5"/></svg></a>
+        </div>
+      </div>
+    </div>
+    <div class="container footer-bottom">
+      <span>© <span id="year">2026</span> Elevartemis Marketing Group</span>
+      <a href="#main" class="back-to-top">Back to top</a>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+  <script src="js/contact.js"></script>
+</body>
+</html>
