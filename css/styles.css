@@ -302,8 +302,8 @@ a:hover { color: #E2D4FF; }
 .wwd-head .section-title .accent { display: block; }
 .wwd-copy p { font-size: 18px; line-height: 1.7; color: var(--text-soft); }
 .wwd-copy p + p { margin-top: 16px; color: var(--text); }
-.outcome-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 24px; }
-.outcome-card { padding: 36px 36px 32px; display: flex; flex-direction: column; gap: 14px; }
+.outcome-grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 20px; }
+.outcome-card { padding: 30px 24px 28px; display: flex; flex-direction: column; gap: 14px; }
 .outcome-icon {
   width: 52px; height: 52px; border-radius: 12px; display: flex; align-items: center; justify-content: center;
   background: rgba(167, 123, 255, .14); margin-bottom: 6px;
@@ -313,8 +313,8 @@ a:hover { color: #E2D4FF; }
 .outcome-card.warm .outcome-icon { background: rgba(242, 169, 59, .14); }
 .outcome-card.warm .outcome-icon svg { stroke: var(--orange); }
 .outcome-card:hover .outcome-icon { transform: translateY(-3px) rotate(-5deg); }
-.outcome-card h3 { font-family: var(--serif); font-size: clamp(21px, 2vw, 25px); line-height: 1.3; color: #fff; }
-.outcome-card p { font-size: 16px; line-height: 1.7; color: var(--text-soft); flex: 1; }
+.outcome-card h3 { font-family: var(--serif); font-size: clamp(19px, 1.6vw, 21px); line-height: 1.3; color: #fff; }
+.outcome-card p { font-size: 15px; line-height: 1.7; color: var(--text-soft); flex: 1; }
 .outcome-tags { list-style: none; margin: 8px 0 0; padding: 0; display: flex; flex-wrap: wrap; gap: 6px 0; }
 .outcome-tags li { font-size: 12px; font-weight: 700; letter-spacing: 1.2px; text-transform: uppercase; color: var(--lavender); }
 .outcome-tags li:not(:last-child)::after { content: "·"; margin: 0 10px; color: var(--text-muted); }
@@ -563,7 +563,7 @@ a:hover { color: #E2D4FF; }
    ========================================================= */
 @media (max-width: 1180px) {
   .main-nav { gap: 24px; }
-  .service-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .service-grid, .outcome-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .wwd-head { grid-template-columns: 1fr; gap: 24px; }
   .trust-inner { flex-direction: column; align-items: stretch; gap: 20px; text-align: center; }
   .trust-label { flex: none; }
