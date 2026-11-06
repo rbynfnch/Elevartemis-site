@@ -111,6 +111,10 @@ window.ELEVARTEMIS_RESOURCES = {
      service: optional { label, href } for a gentle next step */
   articleCategories: ['Search', 'Social & Content', 'Website', 'Strategy', 'Measurement'],
   articles: [
+    { id: 'brand-worth-choosing', category: 'Strategy', title: 'When everyone can create content, what makes your brand worth choosing?',
+      excerpt: "Your logo isn't your brand. What actually sets you apart when customers have other options.",
+      url: 'articles/what-makes-your-brand-worth-choosing.html', related: 'persona-worksheet',
+      service: { label: 'Strategy & Planning', href: 'services.html#strategy' } },
     { id: 'seo-isnt-dead', category: 'Search', title: "SEO isn't dead. But the way customers find you is changing.",
       excerpt: 'Google, Maps, reviews, and AI tools: what still matters, what is new, and where to start.',
       url: 'articles/seo-isnt-dead.html', related: 'local-seo',

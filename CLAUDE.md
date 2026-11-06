@@ -31,6 +31,9 @@ Hosted on Vercel, deployed automatically from GitHub (`rbynfnch/Elevartemis-site
 - Articles live under Resources (no separate nav item). After adding one: add it to `articles` in
   `js/resources-data.js` with its `url`, and update the "From the Marketing Library" cards on the home page.
 - The header and footer are repeated in every article too, so nav/footer changes apply there as well.
+- Publish dates for the first five articles are back-dated one week apart (all Fridays):
+  1 Sep 25, 2026 (SEO Isn't Dead) · 2 Oct 2 (Brand Worth Choosing) · 3 Oct 9 · 4 Oct 16 · 5 Oct 23.
+  Newest first in `js/resources-data.js` and on the home page cards.
 
 ## Do not break
 - **Formspree links.** The contact form's `action` in `contact.html` and `NEWSLETTER.action` in
