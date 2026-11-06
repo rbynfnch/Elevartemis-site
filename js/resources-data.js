@@ -111,6 +111,10 @@ window.ELEVARTEMIS_RESOURCES = {
      service: optional { label, href } for a gentle next step */
   articleCategories: ['Search', 'Social & Content', 'Website', 'Strategy', 'Measurement'],
   articles: [
+    { id: 'attention-into-customers', category: 'Website', title: 'Your marketing is getting attention. But is it getting customers?',
+      excerpt: 'Traffic does not pay the bills. How to turn the attention you already have into inquiries.',
+      url: 'articles/attention-into-customers.html', related: 'website-checklist',
+      service: { label: 'Websites & Digital Presence', href: 'services.html#websites' } },
     { id: 'brand-worth-choosing', category: 'Strategy', title: 'When everyone can create content, what makes your brand worth choosing?',
       excerpt: "Your logo isn't your brand. What actually sets you apart when customers have other options.",
       url: 'articles/what-makes-your-brand-worth-choosing.html', related: 'persona-worksheet',
