@@ -19,11 +19,11 @@ window.ELEVARTEMIS_RESOURCES = {
              (use a SEPARATE Formspree form from the contact form).
              Later you can swap in Mailchimp, Kit, MailerLite, etc.
              and set emailField to the name their form uses.
-     Until a link is set, signups open an email to hello@elevartemis.com. */
+     Until a link is set, signups open an email to Elevartemis@gmail.com. */
   NEWSLETTER: {
     action: '',
     emailField: 'email',
-    fallbackEmail: 'hello@elevartemis.com'
+    fallbackEmail: 'Elevartemis@gmail.com'
   },
 
   /* ---------- Guide categories (order = filter order) ---------- */
@@ -111,6 +111,34 @@ window.ELEVARTEMIS_RESOURCES = {
      service: optional { label, href } for a gentle next step */
   articleCategories: ['Search', 'Social & Content', 'Website', 'Strategy', 'Measurement'],
   articles: [
+    { id: 'marketing-strategy', category: 'Strategy', title: 'Stop doing random marketing. Start building a strategy.',
+      excerpt: 'Connect your marketing to real goals: audience, positioning, channels, budget, and a 90-day plan.',
+      url: 'articles/marketing-strategy.html', related: 'no-team-plan',
+      service: { label: 'Strategy & Planning', href: 'services.html#strategy' } },
+    { id: 'social-media-strategy', category: 'Social & Content', title: "Posting three times a week isn't a social media strategy",
+      excerpt: 'Know why you are posting: goals, four content purposes, the right platforms, and a simple weekly rhythm.',
+      url: 'articles/social-media-strategy.html', related: '30-day-planner',
+      service: { label: 'Content, SEO & Visibility', href: 'services.html#content-seo' } },
+    { id: 'local-seo-can-they-find-you', category: 'Search', title: 'Your next customer might be right down the street. Can they find you?',
+      excerpt: 'Local SEO basics: your Google Business Profile, reviews, local content, and consistent listings.',
+      url: 'articles/local-seo-can-they-find-you.html', related: 'gbp-checklist',
+      service: { label: 'Content, SEO & Visibility', href: 'services.html#content-seo' } },
+    { id: 'is-your-marketing-working', category: 'Measurement', title: 'Stop guessing: how to know if your marketing is actually working',
+      excerpt: 'Pick metrics that match your goals, track what matters, and read reports that lead to decisions.',
+      url: 'articles/is-your-marketing-working.html', related: 'metrics-guide',
+      service: { label: 'Strategy & Planning', href: 'services.html#strategy' } },
+    { id: 'attention-into-customers', category: 'Website', title: 'Your marketing is getting attention. But is it getting customers?',
+      excerpt: 'Traffic does not pay the bills. How to turn the attention you already have into inquiries.',
+      url: 'articles/attention-into-customers.html', related: 'website-checklist',
+      service: { label: 'Websites & Digital Presence', href: 'services.html#websites' } },
+    { id: 'brand-worth-choosing', category: 'Strategy', title: 'When everyone can create content, what makes your brand worth choosing?',
+      excerpt: "Your logo isn't your brand. What actually sets you apart when customers have other options.",
+      url: 'articles/what-makes-your-brand-worth-choosing.html', related: 'persona-worksheet',
+      service: { label: 'Strategy & Planning', href: 'services.html#strategy' } },
+    { id: 'seo-isnt-dead', category: 'Search', title: "SEO isn't dead. But the way customers find you is changing.",
+      excerpt: 'Google, Maps, reviews, and AI tools: what still matters, what is new, and where to start.',
+      url: 'articles/seo-isnt-dead.html', related: 'local-seo',
+      service: { label: 'Content, SEO & Visibility', href: 'services.html#content-seo' } },
     { id: 'seo-what-it-does', category: 'Search', title: 'What does SEO actually do for a small business?',
       excerpt: 'Less magic, more plumbing: how search visibility turns into phone calls.', url: '', related: 'local-seo' },
     { id: 'post-every-day', category: 'Social & Content', title: 'Do I really need to post on social media every day?',

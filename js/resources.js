@@ -146,7 +146,7 @@
     '<article class="res-card tool-card suggest">' +
       '<h3 class="res-title sm">Wish there was a tool for it?</h3>' +
       '<p class="res-desc">Tell us what would make your marketing easier. We build new resources based on what owners ask for.</p>' +
-      '<div class="res-actions"><a class="res-cta" href="mailto:' + esc(NL.fallbackEmail || 'hello@elevartemis.com') + '?subject=' + encodeURIComponent('Resource idea') + '">Suggest a resource' + icon('arrow', 'ico-sm') + '</a></div>' +
+      '<div class="res-actions"><a class="res-cta" href="mailto:' + esc(NL.fallbackEmail || 'Elevartemis@gmail.com') + '?subject=' + encodeURIComponent('Resource idea') + '">Suggest a resource' + icon('arrow', 'ico-sm') + '</a></div>' +
     '</article>';
   revealWhenVisible(toolGrid);
 
