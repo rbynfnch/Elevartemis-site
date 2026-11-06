@@ -111,6 +111,10 @@ window.ELEVARTEMIS_RESOURCES = {
      service: optional { label, href } for a gentle next step */
   articleCategories: ['Search', 'Social & Content', 'Website', 'Strategy', 'Measurement'],
   articles: [
+    { id: 'seo-isnt-dead', category: 'Search', title: "SEO isn't dead. But the way customers find you is changing.",
+      excerpt: 'Google, Maps, reviews, and AI tools: what still matters, what is new, and where to start.',
+      url: 'articles/seo-isnt-dead.html', related: 'local-seo',
+      service: { label: 'Content, SEO & Visibility', href: 'services.html#content-seo' } },
     { id: 'seo-what-it-does', category: 'Search', title: 'What does SEO actually do for a small business?',
       excerpt: 'Less magic, more plumbing: how search visibility turns into phone calls.', url: '', related: 'local-seo' },
     { id: 'post-every-day', category: 'Social & Content', title: 'Do I really need to post on social media every day?',

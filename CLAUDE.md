@@ -18,11 +18,19 @@ Hosted on Vercel, deployed automatically from GitHub (`rbynfnch/Elevartemis-site
 | Resources | `resources.html`, `css/resources.css`, `js/resources.js`, `js/resources-data.js` |
 | About | `about.html`, `css/about.css`, `js/about.js` |
 | Contact | `contact.html`, `css/contact.css`, `js/contact.js` |
+| Articles | `articles/*.html`, `css/article.css` |
 
 - `css/styles.css` and `js/main.js` are shared by every page (header, footer, scroll reveals, mobile menu).
 - `js/newsletter.js` handles every newsletter signup.
-- Every page repeats the same header nav and footer. When a link changes, update all six pages.
+- Every page repeats the same header nav and footer. When a link changes, update all six pages and every article in `articles/`.
 - Nav order: Home | Services | Our Work | Resources | About | Contact.
+
+## Articles
+- One page per article in `articles/` (e.g. `articles/seo-isnt-dead.html`). Copy an existing article
+  as the template. Links inside `articles/` use `../` (`../css/styles.css`, `../contact.html`).
+- Articles live under Resources (no separate nav item). After adding one: add it to `articles` in
+  `js/resources-data.js` with its `url`, and update the "From the Marketing Library" cards on the home page.
+- The header and footer are repeated in every article too, so nav/footer changes apply there as well.
 
 ## Do not break
 - **Formspree links.** The contact form's `action` in `contact.html` and `NEWSLETTER.action` in
