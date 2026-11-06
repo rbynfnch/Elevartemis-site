@@ -109,3 +109,9 @@
   .ar-table th, .ar-table td { padding: 12px 14px; }
   .ar-table tbody th { width: 40%; }
 }
+
+/* Sub-headings inside a section */
+.ar-body h3 { font-family: var(--serif); font-weight: 700; color: var(--lavender); font-size: clamp(19px, 1.8vw, 22px); line-height: 1.35; margin: 36px 0 14px; }
+.ar-table tbody th { white-space: nowrap; }
+@media (max-width: 720px) { .ar-table tbody th { white-space: normal; } }
+.ar-table:has(thead th:nth-child(3)) tbody th { width: auto; }

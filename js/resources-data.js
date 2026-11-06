@@ -111,6 +111,18 @@ window.ELEVARTEMIS_RESOURCES = {
      service: optional { label, href } for a gentle next step */
   articleCategories: ['Search', 'Social & Content', 'Website', 'Strategy', 'Measurement'],
   articles: [
+    { id: 'marketing-strategy', category: 'Strategy', title: 'Stop doing random marketing. Start building a strategy.',
+      excerpt: 'Connect your marketing to real goals: audience, positioning, channels, budget, and a 90-day plan.',
+      url: 'articles/marketing-strategy.html', related: 'no-team-plan',
+      service: { label: 'Strategy & Planning', href: 'services.html#strategy' } },
+    { id: 'social-media-strategy', category: 'Social & Content', title: "Posting three times a week isn't a social media strategy",
+      excerpt: 'Know why you are posting: goals, four content purposes, the right platforms, and a simple weekly rhythm.',
+      url: 'articles/social-media-strategy.html', related: '30-day-planner',
+      service: { label: 'Content, SEO & Visibility', href: 'services.html#content-seo' } },
+    { id: 'local-seo-can-they-find-you', category: 'Search', title: 'Your next customer might be right down the street. Can they find you?',
+      excerpt: 'Local SEO basics: your Google Business Profile, reviews, local content, and consistent listings.',
+      url: 'articles/local-seo-can-they-find-you.html', related: 'gbp-checklist',
+      service: { label: 'Content, SEO & Visibility', href: 'services.html#content-seo' } },
     { id: 'is-your-marketing-working', category: 'Measurement', title: 'Stop guessing: how to know if your marketing is actually working',
       excerpt: 'Pick metrics that match your goals, track what matters, and read reports that lead to decisions.',
       url: 'articles/is-your-marketing-working.html', related: 'metrics-guide',
