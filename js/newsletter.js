@@ -11,7 +11,7 @@
   'use strict';
 
   var NL = (window.ELEVARTEMIS_RESOURCES && window.ELEVARTEMIS_RESOURCES.NEWSLETTER) || {};
-  var FALLBACK = NL.fallbackEmail || 'hello@elevartemis.com';
+  var FALLBACK = NL.fallbackEmail || 'Elevartemis@gmail.com';
 
   function viaFormspree(email, source) {
     var data = new FormData();

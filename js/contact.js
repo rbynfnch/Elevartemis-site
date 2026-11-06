@@ -9,7 +9,7 @@
   var form = document.getElementById('contactForm');
   if (!form) return;
 
-  var FALLBACK_EMAIL = 'hello@elevartemis.com';
+  var FALLBACK_EMAIL = 'Elevartemis@gmail.com';
   var reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
   var step1 = document.getElementById('step1');
   var step2 = document.getElementById('step2');

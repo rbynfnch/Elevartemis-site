@@ -19,11 +19,11 @@ window.ELEVARTEMIS_RESOURCES = {
              (use a SEPARATE Formspree form from the contact form).
              Later you can swap in Mailchimp, Kit, MailerLite, etc.
              and set emailField to the name their form uses.
-     Until a link is set, signups open an email to hello@elevartemis.com. */
+     Until a link is set, signups open an email to Elevartemis@gmail.com. */
   NEWSLETTER: {
     action: '',
     emailField: 'email',
-    fallbackEmail: 'hello@elevartemis.com'
+    fallbackEmail: 'Elevartemis@gmail.com'
   },
 
   /* ---------- Guide categories (order = filter order) ---------- */
