@@ -40,7 +40,7 @@
   /* ---------- calls to action ---------- */
   function ctaFor(item, verb) {
     if (item.url) {
-      if (item.gated && NL.action) {
+      if (item.gated && window.ElevartemisNewsletter && window.ElevartemisNewsletter.connected) {
         return '<button type="button" class="res-cta" data-gate="' + esc(item.id) + '">' + esc(verb) + icon('arrow', 'ico-sm') + '</button>';
       }
       return '<a class="res-cta" href="' + esc(item.url) + '" target="_blank" rel="noopener">' + esc(verb) + icon('arrow', 'ico-sm') + '</a>';
@@ -241,26 +241,8 @@
   /* ---------- newsletter signup ---------- */
   var EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
-  // Posts to the provider in a hidden frame so visitors stay on the page.
-  function sendToProvider(email) {
-    var frameName = 'nl-frame';
-    if (!document.getElementById(frameName)) {
-      var f = document.createElement('iframe'); f.name = frameName; f.id = frameName; f.hidden = true; f.title = 'Newsletter';
-      document.body.appendChild(f);
-    }
-    var form = document.createElement('form');
-    form.action = NL.action; form.method = 'post'; form.target = frameName; form.hidden = true;
-    var input = document.createElement('input'); input.type = 'email'; input.name = NL.emailField || 'email'; input.value = email;
-    form.appendChild(input); document.body.appendChild(form); form.submit(); form.remove();
-  }
-  function subscribe(email) {
-    if (NL.action) { sendToProvider(email); return 'You\'re in. Check your inbox to confirm your subscription.'; }
-    var to = NL.fallbackEmail || 'hello@elevartemis.com';
-    window.location.href = 'mailto:' + to + '?subject=' + encodeURIComponent('Subscribe me to the Elevartemis Brief') +
-      '&body=' + encodeURIComponent('Please add ' + email + ' to the Elevartemis Brief.');
-    return 'Your email app should open with a short note. Send it and you\'re on the list.';
-  }
-  function handleForm(form, after) {
+  function handleForm(form, after, source) {
+    var btn = form.querySelector('button[type="submit"]');
     form.addEventListener('submit', function (e) {
       e.preventDefault();
       var input = form.querySelector('input[type="email"]');
@@ -270,9 +252,16 @@
         input.setAttribute('aria-invalid', 'true'); msg.className = 'brief-msg is-error';
         msg.textContent = 'Please enter a valid email address.'; input.focus(); return;
       }
-      input.removeAttribute('aria-invalid'); msg.className = 'brief-msg is-ok';
-      msg.textContent = subscribe(email);
-      if (after) after(form);
+      input.removeAttribute('aria-invalid');
+      var label = btn ? btn.textContent : '';
+      if (btn) { btn.disabled = true; btn.textContent = 'Adding you…'; }
+      var src = typeof source === 'function' ? source() : (source || 'Resources page');
+      window.ElevartemisNewsletter.subscribe(email, src).then(function (r) {
+        msg.className = 'brief-msg ' + (r.ok ? 'is-ok' : 'is-error');
+        msg.textContent = r.message;
+        if (r.ok) { input.value = ''; if (after) after(form); }
+        if (btn) { btn.disabled = false; btn.textContent = label; }
+      });
     });
   }
   Array.prototype.forEach.call(document.querySelectorAll('.brief-form'), function (f) { handleForm(f); });
@@ -294,6 +283,6 @@
         var msg = form.querySelector('.brief-msg');
         msg.innerHTML = 'Thanks! <a href="' + esc(gateItem.url) + '" target="_blank" rel="noopener">Open your download</a>';
       }
-    });
+    }, function () { return 'Download: ' + (gateItem ? gateItem.title : 'resource'); });
   }
 })();

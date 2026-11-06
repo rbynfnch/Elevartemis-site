@@ -13,10 +13,13 @@
 
 window.ELEVARTEMIS_RESOURCES = {
 
-  /* ---------- Newsletter provider ----------
-     Paste the form action URL from Mailchimp, Kit (ConvertKit),
-     Buttondown, etc. and the name of its email field.
-     Until then, signups open an email to hello@elevartemis.com. */
+  /* ---------- Newsletter signups ----------
+     action: paste your Formspree form link here, e.g.
+             'https://formspree.io/f/abcd1234'
+             (use a SEPARATE Formspree form from the contact form).
+             Later you can swap in Mailchimp, Kit, MailerLite, etc.
+             and set emailField to the name their form uses.
+     Until a link is set, signups open an email to hello@elevartemis.com. */
   NEWSLETTER: {
     action: '',
     emailField: 'email',

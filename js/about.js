@@ -26,23 +26,10 @@
     update();
   }
 
-  /* ---------- Newsletter (same settings as the Resources page) ---------- */
-  var NL = (window.ELEVARTEMIS_RESOURCES && window.ELEVARTEMIS_RESOURCES.NEWSLETTER) || {};
+  /* ---------- Newsletter (settings in js/resources-data.js) ---------- */
   var EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-
-  function sendToProvider(email) {
-    var frameName = 'nl-frame';
-    if (!document.getElementById(frameName)) {
-      var f = document.createElement('iframe'); f.name = frameName; f.id = frameName; f.hidden = true; f.title = 'Newsletter';
-      document.body.appendChild(f);
-    }
-    var form = document.createElement('form');
-    form.action = NL.action; form.method = 'post'; form.target = frameName; form.hidden = true;
-    var input = document.createElement('input'); input.type = 'email'; input.name = NL.emailField || 'email'; input.value = email;
-    form.appendChild(input); document.body.appendChild(form); form.submit(); form.remove();
-  }
-
   document.querySelectorAll('.brief-form').forEach(function (form) {
+    var btn = form.querySelector('button[type="submit"]');
     form.addEventListener('submit', function (e) {
       e.preventDefault();
       var input = form.querySelector('input[type="email"]');
@@ -52,16 +39,15 @@
         input.setAttribute('aria-invalid', 'true'); msg.className = 'brief-msg is-error';
         msg.textContent = 'Please enter a valid email address.'; input.focus(); return;
       }
-      input.removeAttribute('aria-invalid'); msg.className = 'brief-msg is-ok';
-      if (NL.action) {
-        sendToProvider(email);
-        msg.textContent = "You're in. Check your inbox to confirm your subscription.";
-      } else {
-        var to = NL.fallbackEmail || 'hello@elevartemis.com';
-        window.location.href = 'mailto:' + to + '?subject=' + encodeURIComponent('Subscribe me to the Elevartemis Brief') +
-          '&body=' + encodeURIComponent('Please add ' + email + ' to the Elevartemis Brief.');
-        msg.textContent = "Your email app should open with a short note. Send it and you're on the list.";
-      }
+      input.removeAttribute('aria-invalid');
+      var label = btn.textContent;
+      btn.disabled = true; btn.textContent = 'Adding you…';
+      window.ElevartemisNewsletter.subscribe(email, 'About page').then(function (r) {
+        msg.className = 'brief-msg ' + (r.ok ? 'is-ok' : 'is-error');
+        msg.textContent = r.message;
+        if (r.ok) input.value = '';
+        btn.disabled = false; btn.textContent = label;
+      });
     });
   });
 })();

@@ -69,7 +69,10 @@
       </a>
     </section>
 
-    <!-- ============ TRUST STRIP ============ -->
+    <!-- ============ TRUST STRIP (hidden for now) ============
+         To bring it back: delete these four lines and the
+         "END TRUST STRIP" line at the bottom, then replace each
+         [Client logo] with <img src="images/client-name.png" alt="Client name">.
     <section class="trust" aria-label="Clients">
       <div class="container trust-inner">
         <p class="trust-label" data-reveal>Trusted by growing businesses across [YOUR REGION]</p>
@@ -82,41 +85,74 @@
         </ul>
       </div>
     </section>
+    ============ END TRUST STRIP ============ -->
 
-    <!-- ============ SERVICES ============ -->
+    <!-- ============ WHAT WE DO ============ -->
     <section class="section services" id="services">
       <div class="container">
-        <div class="section-head center" data-reveal>
-          <p class="rule-label">Our core services</p>
-          <h2 class="section-title">One partner for every part of your marketing.</h2>
+        <div class="wwd-head">
+          <div data-reveal>
+            <p class="eyebrow">What we do</p>
+            <h2 class="section-title lg">The Marketing Playbook Has Changed. <span class="accent">Has Yours?</span></h2>
+          </div>
+          <div class="wwd-copy" data-reveal style="--d:1">
+            <p>Your customers are searching differently, discovering brands through AI, and making decisions before they ever reach your website.</p>
+            <p>We connect strategy, search, content, and technology to help your business get found, earn trust, and turn attention into growth.</p>
+          </div>
         </div>
 
-        <div class="service-grid">
-          <article class="card service-card" data-reveal style="--d:1">
-            <svg class="card-icon" viewBox="0 0 48 48" aria-hidden="true"><rect x="7" y="7" width="34" height="26" rx="2"/><path d="M17 33l-4 9M31 33l4 9M24 33v6"/><path d="M14 14l5 5M19 14l-5 5M30 14c4 0 4 5 0 6l3-2"/><circle cx="28" cy="25" r="3"/></svg>
-            <h3>Strategy &amp; Planning</h3>
-            <p>Smart marketing strategies aligned with your goals and backed by data.</p>
+        <div class="outcome-grid">
+          <article class="card outcome-card" data-reveal style="--d:1">
+            <span class="outcome-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5"/><path d="M15.5 15.5L21 21"/><path d="M7.8 10.6l2 2 3.6-3.8"/></svg></span>
+            <h3>Get Found Where Customers Are Looking</h3>
+            <p>Search is changing. We help your business show up in Google, AI-powered discovery, and the places your customers turn for answers.</p>
+            <ul class="outcome-tags" aria-label="Expertise"><li>SEO</li><li>AI Search Visibility</li><li>Local Search</li></ul>
           </article>
-          <article class="card service-card" data-reveal style="--d:2">
-            <svg class="card-icon" viewBox="0 0 48 48" aria-hidden="true"><path d="M33 6l9 9L18 39l-11 3 3-11z"/><path d="M29 10l9 9M10 31l7 7"/></svg>
-            <h3>Content Marketing</h3>
-            <p>Content that tells your story, connects with your audience, and builds trust.</p>
+          <article class="card outcome-card warm" data-reveal style="--d:2">
+            <span class="outcome-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6.5 6.2A7.5 7.5 0 0 1 19.4 11"/><path d="M4.6 10a7.4 7.4 0 0 0-.1 1.4c0 2 .4 3.6 1 5"/><path d="M8 11.5a4 4 0 0 1 8 0c0 3-.4 5.6-1.3 8"/><path d="M12 11.5c0 3.6-.6 6.5-2 9"/><path d="M19.4 14c-.1 1.8-.4 3.4-.9 4.8"/><path d="M9.3 15.8c-.3 1.6-.9 3-1.7 4.2"/></svg></span>
+            <h3>Build a Brand People Choose</h3>
+            <p>Attention is easy to lose. We sharpen your message, define what makes you different, and create a brand people recognize, remember, and trust.</p>
+            <ul class="outcome-tags" aria-label="Expertise"><li>Positioning</li><li>Brand Identity</li><li>Messaging</li></ul>
           </article>
-          <article class="card service-card" data-reveal style="--d:3">
-            <svg class="card-icon" viewBox="0 0 48 48" aria-hidden="true"><path d="M6 20v8h6l14 9V11L12 20z"/><path d="M12 28l3 10h5l-2-9"/><path d="M33 18a8 8 0 0 1 0 12M38 24h5M36 14l4-3M36 34l4 3"/></svg>
-            <h3>Digital Marketing</h3>
-            <p>Reach the right people, in the right places, with the right message.</p>
+          <article class="card outcome-card" data-reveal style="--d:3">
+            <span class="outcome-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 9l11 4.2-4.6 1.6L13.8 19.5z"/><path d="M15.4 14.8L20 19.4"/><path d="M5 3.5l1.3 2.4M2.5 8.2l2.6.6M8.8 2.6l-.3 2.7M3.4 13l2.2-1.6"/></svg></span>
+            <h3>Turn Attention Into Customers</h3>
+            <p>Traffic means little without action. We build connected campaigns, content, and digital experiences designed to turn interest into inquiries and sales.</p>
+            <ul class="outcome-tags" aria-label="Expertise"><li>Websites</li><li>Content</li><li>Campaigns</li><li>Conversion</li></ul>
           </article>
-          <article class="card service-card" data-reveal style="--d:4">
-            <svg class="card-icon" viewBox="0 0 48 48" aria-hidden="true"><path d="M41 6L24 25l-3-3L38 5z"/><path d="M21 22c-5-1-9 3-9 7 0 4-3 6-6 6 3 4 9 5 13 2 4-3 5-8 2-11"/></svg>
-            <h3>Branding &amp; Creative</h3>
-            <p>A strong brand identity and creative that captures attention.</p>
+          <article class="card outcome-card warm" data-reveal style="--d:4">
+            <span class="outcome-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 21h18"/><path d="M5 21v-4M9.5 21v-7M14 21v-5M18.5 21v-9"/><path d="M4 12.5l5.5-4.5 4 3L20 4.5"/><path d="M16 4.5h4v4"/></svg></span>
+            <h3>Know What's Working. Grow What Does.</h3>
+            <p>No more guessing where your marketing dollars go. We connect data, insights, and strategy so every decision has a purpose.</p>
+            <ul class="outcome-tags" aria-label="Expertise"><li>Analytics</li><li>Optimization</li><li>Growth Strategy</li></ul>
           </article>
         </div>
 
-        <div class="services-more" data-reveal>
-          <p>Plus website design, social media, reporting, and reputation management.</p>
-          <a href="services.html" class="btn btn-outline">Explore all services</a>
+        <!-- The Elevartemis approach -->
+        <div class="approach" data-reveal>
+          <div class="approach-copy">
+            <p class="eyebrow">The Elevartemis approach</p>
+            <h2 class="approach-title">More Marketing Isn't Always the Answer. <span class="accent">Better-Connected Marketing&nbsp;Is.</span></h2>
+            <p>You don't need another disconnected campaign, another platform to manage, or more content just to keep up.</p>
+            <p>You need a strategy where your brand, website, search visibility, content, and customer experience work together.</p>
+            <p class="approach-punch">That's what we build.</p>
+            <a href="services.html" class="btn btn-orange btn-lg approach-btn">Explore Our Approach <span aria-hidden="true">&rarr;</span></a>
+          </div>
+
+          <div class="approach-visual" aria-hidden="true">
+            <svg class="approach-lines" viewBox="0 0 400 400">
+              <circle class="orbit" cx="200" cy="200" r="140"/>
+              <path d="M200 200 L200 60"/><path d="M200 200 L333 157"/><path d="M200 200 L282 313"/>
+              <path d="M200 200 L118 313"/><path d="M200 200 L67 157"/>
+              <path class="ring" d="M200 60 L333 157 L282 313 L118 313 L67 157 Z"/>
+            </svg>
+            <span class="node n-center"><img src="images/logo.png" alt=""><b>Strategy</b></span>
+            <span class="node n1">Brand</span>
+            <span class="node n2">Website</span>
+            <span class="node n3">Search visibility</span>
+            <span class="node n4">Content</span>
+            <span class="node n5">Customer experience</span>
+          </div>
         </div>
       </div>
     </section>
