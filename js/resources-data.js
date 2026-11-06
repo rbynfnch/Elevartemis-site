@@ -111,6 +111,10 @@ window.ELEVARTEMIS_RESOURCES = {
      service: optional { label, href } for a gentle next step */
   articleCategories: ['Search', 'Social & Content', 'Website', 'Strategy', 'Measurement'],
   articles: [
+    { id: 'is-your-marketing-working', category: 'Measurement', title: 'Stop guessing: how to know if your marketing is actually working',
+      excerpt: 'Pick metrics that match your goals, track what matters, and read reports that lead to decisions.',
+      url: 'articles/is-your-marketing-working.html', related: 'metrics-guide',
+      service: { label: 'Strategy & Planning', href: 'services.html#strategy' } },
     { id: 'attention-into-customers', category: 'Website', title: 'Your marketing is getting attention. But is it getting customers?',
       excerpt: 'Traffic does not pay the bills. How to turn the attention you already have into inquiries.',
       url: 'articles/attention-into-customers.html', related: 'website-checklist',

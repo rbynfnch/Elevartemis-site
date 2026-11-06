@@ -95,3 +95,17 @@
 @media (prefers-reduced-motion: reduce) {
   .ar-toc li a { transition: none; }
 }
+
+/* Tables (scroll sideways on narrow screens instead of squeezing) */
+.ar-table-wrap { overflow-x: auto; margin: 8px 0 26px; border: 1px solid var(--line); border-radius: 12px; background: var(--navy-600); }
+.ar-table { width: 100%; min-width: 560px; border-collapse: collapse; font-size: 15px; line-height: 1.55; }
+.ar-table th, .ar-table td { padding: 14px 18px; text-align: left; vertical-align: top; border-bottom: 1px solid var(--line-soft); }
+.ar-table thead th { font-size: 12px; font-weight: 700; letter-spacing: 1.4px; text-transform: uppercase; color: var(--orange); background: var(--card); }
+.ar-table tbody th { font-weight: 600; color: #fff; width: 36%; }
+.ar-table td { color: var(--text-soft); }
+.ar-table tbody tr:last-child th, .ar-table tbody tr:last-child td { border-bottom: 0; }
+@media (max-width: 720px) {
+  .ar-table { min-width: 0; font-size: 14px; }
+  .ar-table th, .ar-table td { padding: 12px 14px; }
+  .ar-table tbody th { width: 40%; }
+}
