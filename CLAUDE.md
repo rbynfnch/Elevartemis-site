@@ -43,6 +43,8 @@ Hosted on Vercel, deployed automatically from GitHub (`rbynfnch/Elevartemis-site
 - **Resources content** comes from `js/resources-data.js`. Add guides, tools, articles, and
   Start Here paths there instead of hard-coding cards in HTML. Leave `url: ''` and the card shows "Coming soon".
 - **Hidden client logo strip** on the home page is commented out on purpose (saved for later). Don't delete it.
+- **Hidden sections saved for later** (commented out, don't delete): home page Our Work preview and
+  testimonial (revisit after Nov 30, 2026); About page "The people behind the work" (revisit Sept 2027).
 
 ## Conventions
 - Reuse existing classes and CSS variables before adding new ones. Watch for name clashes:
