@@ -181,8 +181,7 @@
   border-left: 2px solid var(--purple-bright); border-bottom: 2px solid var(--purple-bright);
   transform: rotate(-45deg);
 }
-.option-price { margin-top: 12px; padding-top: 18px; border-top: 1px solid var(--line); font-size: 15px; font-weight: 700; color: var(--orange); }
-.option .btn { align-self: stretch; margin-top: 6px; }
+.option .btn { align-self: stretch; margin-top: 18px; }
 
 .option-featured {
   background: linear-gradient(180deg, #2A1F63 0%, var(--card) 70%);
