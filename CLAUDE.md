@@ -14,7 +14,7 @@ Hosted on Vercel, deployed automatically from GitHub (`rbynfnch/Elevartemis-site
 |---|---|
 | Home | `index.html` |
 | Services | `services.html`, `css/services.css` |
-| Our Work | `work.html`, `css/work.css`, `js/work.js` |
+| Our Work (**draft, hidden**) | `work.html`, `css/work.css`, `js/work.js` |
 | Resources | `resources.html`, `css/resources.css`, `js/resources.js`, `js/resources-data.js` |
 | About | `about.html`, `css/about.css`, `js/about.js` |
 | Contact | `contact.html`, `css/contact.css`, `js/contact.js` |
@@ -23,7 +23,10 @@ Hosted on Vercel, deployed automatically from GitHub (`rbynfnch/Elevartemis-site
 - `css/styles.css` and `js/main.js` are shared by every page (header, footer, scroll reveals, mobile menu).
 - `js/newsletter.js` handles every newsletter signup.
 - Every page repeats the same header nav and footer. When a link changes, update all six pages and every article in `articles/`.
-- Nav order: Home | Services | Our Work | Resources | About | Contact.
+- Nav order: Home | Services | Resources | About | Contact.
+  (Our Work is a hidden draft until about May 2027: unlinked everywhere, `noindex`, and `vercel.json`
+  redirects `/work.html` to the home page. Restore steps are in the comment at the top of `work.html`.
+  When it returns, it goes back between Services and Resources.)
 
 ## Articles
 - One page per article in `articles/` (e.g. `articles/seo-isnt-dead.html`). Copy an existing article
@@ -55,10 +58,11 @@ Hosted on Vercel, deployed automatically from GitHub (`rbynfnch/Elevartemis-site
 - Check layouts at desktop (about 1440px) and phone (about 390px) widths.
 - Don't invent client names, results, testimonials, or metrics. Use [bracketed] placeholders.
 - `images/work-elevartemis-desktop.jpg` and `-mobile.jpg` are screenshots of the home page shown on Our Work.
-  If the home page changes noticeably, mention that they may need refreshing.
+  They're out of date; refresh them when Our Work comes back.
 
 ## Deploying
 - Vercel deploys from GitHub on every push. There are no environment variables.
+  `vercel.json` only holds the temporary Our Work redirect.
 - Claude can read the Vercel project (team "Elevartemis", project `elevartemis-site`) through the
   Vercel connector: deployment status, build logs, runtime errors, domains. If a deploy fails, check
   the build log there first.
